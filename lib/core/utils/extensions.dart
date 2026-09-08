@@ -2,7 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../app/constants/app_constants.dart';
-import '../../enums/app_enums.dart';
+import '../../app/constants/app_enums.dart';
 import '../../features/dictionary/data/database/app_database.dart';
 
 extension WordX on Word {
@@ -50,5 +50,6 @@ extension TestTypeX on TestType {
     TestType.flashcards => 'testsPage.flashcards'.tr(),
     TestType.translation => 'testsPage.translation'.tr(),
     TestType.listening => 'testsPage.listening'.tr(),
+    TestType.findMatches => 'testsPage.findMatches'.tr(),
   };
 }

@@ -15,6 +15,7 @@ class AppRoutes {
   static const flashcards = 'flashcards';
   static const test = 'test';
   static const listening = 'listening';
+  static const findMatches = 'findMatches';
 
   /// Shell routes
   static const tests = '/tests';

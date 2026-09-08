@@ -4,9 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quiz_app/app/constants/app_constants.dart';
 import 'package:quiz_app/core/presentation/widgets/scrolled_wrapper.dart';
 
+import '../../../../app/constants/app_enums.dart';
 import '../../../../core/presentation/widgets/one_field_form.dart';
 import '../../../../core/utils/extensions.dart';
-import '../../../../enums/app_enums.dart';
 import '../../../history/presentation/cubit/cubit.dart';
 import '../cubit/cubit.dart';
 import '../widgets/answer_result.dart';

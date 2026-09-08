@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quiz_app/app/router/app_router.dart';
 import 'package:quiz_app/features/auth/presentation/cubit/cubit.dart';
+import 'package:quiz_app/features/find_matches/presentation/cubit/cubit.dart';
 import 'package:quiz_app/features/profile/presentation/cubit/cubit.dart';
 import 'package:quiz_app/features/quiz/presentation/cubit/cubit.dart';
 
@@ -29,6 +30,7 @@ class _MyAppState extends State<MyApp> {
   final translationCubit = getIt<TranslationCubit>();
   final translationCatalogCubit = getIt<TextCatalogCubit>();
   final quizCubit = getIt<QuizCubit>();
+  final findMatchesCubit = getIt<FindMatchesCubit>();
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +43,7 @@ class _MyAppState extends State<MyApp> {
         BlocProvider(create: (_) => translationCubit),
         BlocProvider(create: (_) => translationCatalogCubit),
         BlocProvider(create: (_) => quizCubit),
+        BlocProvider(create: (_) => findMatchesCubit),
       ],
       child: BlocBuilder<ThemeCubit, ThemeState>(
         builder: (context, state) {

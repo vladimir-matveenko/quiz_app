@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:quiz_app/enums/app_enums.dart';
+import 'package:quiz_app/app/constants/app_enums.dart';
 
 import '../../data/models/history_model.dart';
 

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quiz_app/core/presentation/widgets/app_loader.dart';
 import 'package:quiz_app/core/utils/extensions.dart';
-import 'package:quiz_app/enums/app_enums.dart';
+import 'package:quiz_app/app/constants/app_enums.dart';
 
 import '../../domain/entity/history_entity.dart';
 import '../cubit/cubit.dart';

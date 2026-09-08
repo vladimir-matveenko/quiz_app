@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../../enums/app_enums.dart';
+import '../../../../app/constants/app_enums.dart';
 import '../../domain/entity/history_entity.dart';
 
 part 'history_model.freezed.dart';

@@ -62,60 +62,64 @@ class _ListeningPageState extends State<ListeningPage> {
       onLoaded: (state) {
         final current = state.words[state.currentIndex];
         return ScrolledWrapper(
-          children: [
-            Text(
-              'listeningPage.listenAndWrite'.tr(),
-              style: theme.textTheme.bodyMedium,
-            ),
-            Row(
-              spacing: 8.0,
-              mainAxisAlignment: .center,
-              children: [
-                Text(
-                  '${state.currentIndex + 1} / ${state.words.length}',
-                  style: theme.textTheme.bodyLarge,
-                ),
-                PronounceButton(
-                  onTap: () {
-                    quizCubit.pronounceWord(
-                      current.englishWord,
-                      language: AppConstants.enLocale,
-                    );
+          child: Column(
+            mainAxisAlignment: .center,
+            spacing: 16.0,
+            children: [
+              Text(
+                'listeningPage.listenAndWrite'.tr(),
+                style: theme.textTheme.bodyMedium,
+              ),
+              Row(
+                spacing: 8.0,
+                mainAxisAlignment: .center,
+                children: [
+                  Text(
+                    '${state.currentIndex + 1} / ${state.words.length}',
+                    style: theme.textTheme.bodyLarge,
+                  ),
+                  PronounceButton(
+                    onTap: () {
+                      quizCubit.pronounceWord(
+                        current.englishWord,
+                        language: AppConstants.enLocale,
+                      );
+                    },
+                  ),
+                ],
+              ),
+              OneFieldForm(
+                formKey: _formKey,
+                enabled: !state.answered,
+                controller: _controller,
+                hint: 'listeningPage.inputWord'.tr(),
+              ),
+              if (!state.answered) ...[
+                ElevatedButton(
+                  onPressed: () {
+                    final isValid = _formKey.currentState?.validate() ?? false;
+                    if (isValid) {
+                      quizCubit.checkAnswer(_controller.text);
+                    }
                   },
+                  child: Text('quizPage.check'.tr()),
+                ),
+                const SizedBox(height: 56.0),
+              ] else ...[
+                ElevatedButton(
+                  onPressed: () {
+                    quizCubit.nextQuestion();
+                    _controller.text = '';
+                  },
+                  child: Text('quizPage.next'.tr()),
+                ),
+                AnswerResult(isCorrect: state.correct),
+                Text(
+                  '${'quizPage.correctAnswer'.tr()}: ${current.answerFor(quizCubit.type)}',
                 ),
               ],
-            ),
-            OneFieldForm(
-              formKey: _formKey,
-              enabled: !state.answered,
-              controller: _controller,
-              hint: 'listeningPage.inputWord'.tr(),
-            ),
-            if (!state.answered) ...[
-              ElevatedButton(
-                onPressed: () {
-                  final isValid = _formKey.currentState?.validate() ?? false;
-                  if (isValid) {
-                    quizCubit.checkAnswer(_controller.text);
-                  }
-                },
-                child: Text('quizPage.check'.tr()),
-              ),
-              const SizedBox(height: 56.0),
-            ] else ...[
-              ElevatedButton(
-                onPressed: () {
-                  quizCubit.nextQuestion();
-                  _controller.text = '';
-                },
-                child: Text('quizPage.next'.tr()),
-              ),
-              AnswerResult(isCorrect: state.correct),
-              Text(
-                '${'quizPage.correctAnswer'.tr()}: ${current.answerFor(quizCubit.type)}',
-              ),
             ],
-          ],
+          ),
         );
       },
     );

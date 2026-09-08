@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ScrolledWrapper extends StatelessWidget {
-  const ScrolledWrapper({super.key, required this.children});
+  const ScrolledWrapper({super.key, required this.child});
 
-  final List<Widget> children;
+  final Widget child;
 
   @override
   Widget build(BuildContext context) {
@@ -14,11 +14,7 @@ class ScrolledWrapper extends StatelessWidget {
           physics: const ClampingScrollPhysics(),
           child: ConstrainedBox(
             constraints: BoxConstraints(minHeight: constraints.maxHeight),
-            child: Column(
-              mainAxisAlignment: .center,
-              spacing: 16.0,
-              children: children,
-            ),
+            child: child,
           ),
         );
       },

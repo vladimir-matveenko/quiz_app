@@ -35,17 +35,17 @@ class _FindMatchesPageState extends State<FindMatchesPage> {
       onCompleted: (state) {
         final cup = findMatchesCubit.getCup(
           total: state.totalCount,
-          correct: state.correctCount,
+          errorsCount: state.errorsCount,
         );
         return CompletedWidget(
           cup: cup,
-          correctAnswers: state.correctCount,
-          incorrectAnswers: state.totalCount - state.correctCount,
+          correctAnswers: state.totalCount - state.errorsCount,
+          incorrectAnswers: state.errorsCount,
           totalQuestions: state.totalCount,
           onTap: () {
             historyCubit.addHistoryItem(
               testType: TestType.findMatches,
-              correctAnswers: state.correctCount,
+              correctAnswers: state.totalCount - state.errorsCount,
               totalAnswers: state.totalCount,
             );
           },
@@ -83,24 +83,35 @@ class _FindMatchesPageState extends State<FindMatchesPage> {
             )
             .toList();
         return ScrolledWrapper(
-          children: [
-            Text(
-              '${state.leftWords.length} / ${state.totalCount}',
-              style: theme.textTheme.bodyLarge,
-            ),
-            Row(
-              spacing: 16.0,
-              mainAxisAlignment: .center,
-              children: [
-                Column(spacing: 8.0, crossAxisAlignment: .end, children: left),
-                Column(
-                  spacing: 8.0,
-                  crossAxisAlignment: .start,
-                  children: right,
-                ),
-              ],
-            ),
-          ],
+          child: Column(
+            mainAxisAlignment: .center,
+            spacing: 16.0,
+            children: [
+              Text(
+                '${state.leftWords.length} / ${state.totalCount}',
+                style: theme.textTheme.bodyLarge,
+              ),
+              Row(
+                spacing: 16.0,
+                children: [
+                  Expanded(
+                    child: Column(
+                      spacing: 8.0,
+                      crossAxisAlignment: .stretch,
+                      children: left,
+                    ),
+                  ),
+                  Expanded(
+                    child: Column(
+                      spacing: 8.0,
+                      crossAxisAlignment: .stretch,
+                      children: right,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         );
       },
     );

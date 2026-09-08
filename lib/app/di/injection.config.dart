@@ -119,9 +119,6 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i66.DictionaryLocalDataSource>(
       () => _i66.DictionaryLocalDataSource(gh<_i316.AppDatabase>()),
     );
-    gh.lazySingleton<_i146.FindMatchesCubit>(
-      () => _i146.FindMatchesCubit(gh<_i66.DictionaryLocalDataSource>()),
-    );
     gh.lazySingleton<_i731.HistoryLocalDataSource>(
       () => _i731.HistoryLocalDataSourceImpl(gh<_i316.AppDatabase>()),
     );
@@ -159,6 +156,12 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i37.ThemeRepository>(
       () => _i496.ThemeRepositoryImpl(
         themeLocalDataSource: gh<_i593.ThemeLocalDataSource>(),
+      ),
+    );
+    gh.lazySingleton<_i146.FindMatchesCubit>(
+      () => _i146.FindMatchesCubit(
+        gh<_i66.DictionaryLocalDataSource>(),
+        gh<_i192.TtsService>(),
       ),
     );
     gh.lazySingleton<_i936.QuizCubit>(

@@ -60,49 +60,53 @@ class _QuizPageState extends State<QuizPage> {
       onLoaded: (state) {
         final current = state.words[state.currentIndex];
         return ScrolledWrapper(
-          children: [
-            Text(
-              '${state.currentIndex + 1} / ${state.words.length}',
-              style: theme.textTheme.bodyLarge,
-            ),
-            WordWithPronounce(
-              word: current.questionFor(quizCubit.type),
-              language: quizCubit.type.questionFor,
-            ),
-            OneFieldForm(
-              formKey: _formKey,
-              enabled: !state.answered,
-              controller: _controller,
-              hint: 'quizPage.inputTranslation'.tr(),
-            ),
-            if (!state.answered) ...[
-              ElevatedButton(
-                onPressed: () {
-                  final isValid = _formKey.currentState?.validate() ?? false;
-                  if (isValid) {
-                    quizCubit.checkAnswer(_controller.text);
-                  }
-                },
-                child: Text('quizPage.check'.tr()),
-              ),
-              const SizedBox(height: 56.0),
-            ] else ...[
-              ElevatedButton(
-                onPressed: () {
-                  quizCubit.nextQuestion();
-                  _controller.text = '';
-                },
-                child: Text('quizPage.next'.tr()),
-              ),
-              AnswerResult(isCorrect: state.correct),
+          child: Column(
+            mainAxisAlignment: .center,
+            spacing: 16.0,
+            children: [
               Text(
-                '${'quizPage.correctAnswer'.tr()}: ${current.answerFor(quizCubit.type)}',
-                style: theme.textTheme.bodyMedium?.copyWith(
-                  color: theme.colorScheme.primary,
-                ),
+                '${state.currentIndex + 1} / ${state.words.length}',
+                style: theme.textTheme.bodyLarge,
               ),
+              WordWithPronounce(
+                word: current.questionFor(quizCubit.type),
+                language: quizCubit.type.questionFor,
+              ),
+              OneFieldForm(
+                formKey: _formKey,
+                enabled: !state.answered,
+                controller: _controller,
+                hint: 'quizPage.inputTranslation'.tr(),
+              ),
+              if (!state.answered) ...[
+                ElevatedButton(
+                  onPressed: () {
+                    final isValid = _formKey.currentState?.validate() ?? false;
+                    if (isValid) {
+                      quizCubit.checkAnswer(_controller.text);
+                    }
+                  },
+                  child: Text('quizPage.check'.tr()),
+                ),
+                const SizedBox(height: 56.0),
+              ] else ...[
+                ElevatedButton(
+                  onPressed: () {
+                    quizCubit.nextQuestion();
+                    _controller.text = '';
+                  },
+                  child: Text('quizPage.next'.tr()),
+                ),
+                AnswerResult(isCorrect: state.correct),
+                Text(
+                  '${'quizPage.correctAnswer'.tr()}: ${current.answerFor(quizCubit.type)}',
+                  style: theme.textTheme.bodyMedium?.copyWith(
+                    color: theme.colorScheme.primary,
+                  ),
+                ),
+              ],
             ],
-          ],
+          ),
         );
       },
     );

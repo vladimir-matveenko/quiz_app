@@ -18,7 +18,8 @@
     "flashcards": "Карточки",
     "test": "Тест",
     "translation": "Перевод текста",
-    "listening": "Аудирование"
+    "listening": "Аудирование",
+    "findMatches": "Найти пару"
   },
   "quizPage": {
     "inputTranslation": "Введите перевод",
@@ -60,6 +61,10 @@
     "inputWord": " Введите услышанное",
     "listenAndWrite": "Прослушайте слово и запишите его",
     "listeningCompleted": "Аудирование завершено!"
+  },
+  "findMatchesPage": {
+    "screenName": " Найди пару",
+    "completed": "Завершено!"
   },
   "calendar": {
     "trainingDays": "Дни тренировок"

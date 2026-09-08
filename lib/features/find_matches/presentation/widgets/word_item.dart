@@ -41,7 +41,11 @@ class WordItem extends StatelessWidget {
           borderRadius: .circular(12.0),
           border: .all(color: color),
         ),
-        child: Text(text, style: theme.textTheme.bodyMedium),
+        child: Text(
+          text,
+          style: theme.textTheme.bodyMedium,
+          textAlign: .center,
+        ),
       ),
     );
   }

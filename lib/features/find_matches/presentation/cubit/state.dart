@@ -13,7 +13,7 @@ abstract class FindMatchesState with _$FindMatchesState {
     @Default([]) List<Word> rightWords,
     Word? left,
     Word? right,
-    @Default(0) int correctCount,
+    @Default(0) int errorsCount,
     @Default(0) int totalCount,
     @Default(false) bool correct,
     @Default(false) bool answered,

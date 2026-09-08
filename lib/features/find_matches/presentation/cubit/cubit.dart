@@ -3,19 +3,24 @@ import 'dart:developer';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
+import 'package:quiz_app/app/constants/app_constants.dart';
 import 'package:quiz_app/app/constants/asset_paths.dart';
 import 'package:vibration/vibration.dart';
 
 import '../../../dictionary/data/data_sources/dictionary_local_data_source.dart';
 import '../../../dictionary/data/database/app_database.dart';
+import '../../../dictionary/services/tts_service.dart';
 import 'state.dart';
 
 enum FindMatchesStatus { initial, loading, loaded, completed, error }
 
 @lazySingleton
 class FindMatchesCubit extends Cubit<FindMatchesState> {
-  FindMatchesCubit(this._dataSource) : super(const FindMatchesState());
+  FindMatchesCubit(this._dataSource, this._ttsService)
+    : super(const FindMatchesState());
   final DictionaryLocalDataSource _dataSource;
+  final TtsService _ttsService;
+  var isSpeaking = false;
 
   Future<void> loadWords({int wordCount = 10}) async {
     try {
@@ -37,7 +42,7 @@ class FindMatchesCubit extends Cubit<FindMatchesState> {
             leftWords: words,
             rightWords: rightWords,
             correct: false,
-            correctCount: 0,
+            errorsCount: 0,
             totalCount: wordCount,
           ),
         );
@@ -54,26 +59,35 @@ class FindMatchesCubit extends Cubit<FindMatchesState> {
   }
 
   Future<void> setLeft(Word word) async {
+    if (isSpeaking) return;
+    isSpeaking = true;
+    await _ttsService.setLanguage(AppConstants.ruLocale);
     emit(state.copyWith(left: word));
+    await _ttsService.speak(word.russianWord);
     if (state.right != null) {
-      checkMatch();
+      await checkMatch();
     }
+    isSpeaking = false;
   }
 
   Future<void> setRight(Word word) async {
+    if (isSpeaking) return;
+    isSpeaking = true;
+    await _ttsService.setLanguage(AppConstants.enLocale);
     emit(state.copyWith(right: word));
+    await _ttsService.speak(word.englishWord);
     if (state.left != null) {
-      checkMatch();
+      await checkMatch();
     }
+    isSpeaking = false;
   }
 
   Future<void> checkMatch() async {
     if (state.status != FindMatchesStatus.loaded) return;
     final isCorrect = state.left == state.right;
-    var correctCount = state.correctCount;
-    if (isCorrect) {
-      correctCount++;
-    } else {
+    var errorsCount = state.errorsCount;
+    if (!isCorrect) {
+      errorsCount++;
       if (await Vibration.hasVibrator()) {
         Vibration.vibrate();
       }
@@ -81,7 +95,7 @@ class FindMatchesCubit extends Cubit<FindMatchesState> {
     emit(
       state.copyWith(
         correct: isCorrect,
-        correctCount: correctCount,
+        errorsCount: errorsCount,
         answered: true,
       ),
     );
@@ -117,8 +131,8 @@ class FindMatchesCubit extends Cubit<FindMatchesState> {
     }
   }
 
-  String getCup({required int total, required int correct}) {
-    final percent = total != 0 ? (correct / total) : 0;
+  String getCup({required int total, required int errorsCount}) {
+    final percent = total != 0 ? 1 - (errorsCount / total) : 0;
     if (percent >= 0.8) {
       return AssetPaths.goldenCup;
     }

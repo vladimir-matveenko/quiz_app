@@ -1,6 +1,6 @@
 import 'package:drift/drift.dart';
 
-import '../../../../enums/app_enums.dart';
+import '../../../../app/constants/app_enums.dart';
 
 class HistoryTable extends Table {
   IntColumn get id => integer().autoIncrement()();

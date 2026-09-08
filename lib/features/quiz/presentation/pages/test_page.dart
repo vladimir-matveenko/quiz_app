@@ -8,7 +8,7 @@ import 'package:quiz_app/features/quiz/presentation/widgets/page_wrapper.dart';
 import 'package:quiz_app/features/quiz/presentation/widgets/quiz_completed_widget.dart';
 import 'package:quiz_app/features/quiz/presentation/widgets/word_with_pronounce.dart';
 
-import '../../../../enums/app_enums.dart';
+import '../../../../app/constants/app_enums.dart';
 import '../cubit/cubit.dart';
 import '../widgets/answer_result.dart';
 import '../widgets/answers_block.dart';

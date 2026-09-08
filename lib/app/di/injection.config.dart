@@ -29,6 +29,8 @@ import 'package:quiz_app/features/dictionary/services/dictionary_service.dart'
     as _i457;
 import 'package:quiz_app/features/dictionary/services/tts_service.dart'
     as _i192;
+import 'package:quiz_app/features/find_matches/presentation/cubit/cubit.dart'
+    as _i146;
 import 'package:quiz_app/features/history/data/data_sources/history_local_data_source.dart'
     as _i731;
 import 'package:quiz_app/features/history/data/repository/history_repository_impl.dart'
@@ -116,6 +118,9 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.lazySingleton<_i66.DictionaryLocalDataSource>(
       () => _i66.DictionaryLocalDataSource(gh<_i316.AppDatabase>()),
+    );
+    gh.lazySingleton<_i146.FindMatchesCubit>(
+      () => _i146.FindMatchesCubit(gh<_i66.DictionaryLocalDataSource>()),
     );
     gh.lazySingleton<_i731.HistoryLocalDataSource>(
       () => _i731.HistoryLocalDataSourceImpl(gh<_i316.AppDatabase>()),

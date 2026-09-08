@@ -19,6 +19,7 @@ import 'package:quiz_app/features/text_catalog/presentation/pages/text_catalog_p
 import 'package:quiz_app/features/translation/presentation/pages/translation_page.dart';
 
 import '../../core/presentation/pages/splash_page.dart';
+import '../../features/find_matches/presentation/pages/find_matches_page.dart';
 import '../../features/main/presentation/main_screen.dart';
 import '../../features/quiz/presentation/pages/flashcards_page.dart';
 import '../../features/quiz/presentation/pages/listening_page.dart';
@@ -124,6 +125,11 @@ class AppRouter {
                     path: AppRoutes.listening,
                     pageBuilder: (context, state) =>
                         const NoTransitionPage(child: ListeningPage()),
+                  ),
+                  GoRoute(
+                    path: AppRoutes.findMatches,
+                    pageBuilder: (context, state) =>
+                        const NoTransitionPage(child: FindMatchesPage()),
                   ),
                 ],
               ),

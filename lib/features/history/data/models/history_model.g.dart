@@ -28,4 +28,5 @@ const _$TestTypeEnumMap = {
   TestType.flashcards: 'flashcards',
   TestType.translation: 'translation',
   TestType.listening: 'listening',
+  TestType.findMatches: 'findMatches',
 };

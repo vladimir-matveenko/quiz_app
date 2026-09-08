@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:quiz_app/app/constants/app_enums.dart';
 import 'package:quiz_app/app/constants/asset_paths.dart';
 import 'package:quiz_app/app/router/app_routes.dart';
-import 'package:quiz_app/enums/app_enums.dart';
+import 'package:quiz_app/features/find_matches/presentation/cubit/cubit.dart';
 import 'package:quiz_app/features/profile/presentation/cubit/cubit.dart';
 import 'package:quiz_app/features/quiz/presentation/cubit/cubit.dart';
 
@@ -112,6 +113,18 @@ class TestsPage extends StatelessWidget {
                   },
                   child: Text(
                     'listeningPage.screenName'.tr(),
+                    style: textStyle,
+                  ),
+                ),
+                OutlinedButton(
+                  onPressed: () {
+                    context.read<FindMatchesCubit>().loadWords(
+                      wordCount: wordCount,
+                    );
+                    context.go('${AppRoutes.tests}/${AppRoutes.findMatches}');
+                  },
+                  child: Text(
+                    'findMatchesPage.screenName'.tr(),
                     style: textStyle,
                   ),
                 ),

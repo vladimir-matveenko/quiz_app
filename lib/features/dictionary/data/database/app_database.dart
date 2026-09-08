@@ -1,6 +1,6 @@
 import 'package:drift/drift.dart';
 
-import '../../../../enums/app_enums.dart';
+import '../../../../app/constants/app_enums.dart';
 import '../../../history/data/database/history_table.dart';
 import '../models/words.dart';
 

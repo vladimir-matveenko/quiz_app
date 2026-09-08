@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
 import 'package:quiz_app/app/constants/asset_paths.dart';
 import 'package:quiz_app/core/utils/extensions.dart';
-import 'package:quiz_app/enums/app_enums.dart';
+import 'package:quiz_app/app/constants/app_enums.dart';
 import 'package:vibration/vibration.dart';
 
 import '../../../dictionary/data/data_sources/dictionary_local_data_source.dart';

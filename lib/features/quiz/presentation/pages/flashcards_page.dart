@@ -5,9 +5,9 @@ import 'package:go_router/go_router.dart';
 import 'package:quiz_app/core/utils/extensions.dart';
 import 'package:quiz_app/features/quiz/presentation/widgets/page_wrapper.dart';
 
+import '../../../../app/constants/app_enums.dart';
 import '../../../../app/theme/app_semantic_colors.dart';
 import '../../../../core/presentation/widgets/smooth_flip_card.dart';
-import '../../../../enums/app_enums.dart';
 import '../../../history/presentation/cubit/cubit.dart';
 import '../cubit/cubit.dart';
 import '../widgets/flash_card.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
-import 'package:quiz_app/app/utils/app_utils.dart';
 import 'package:quiz_app/app/constants/app_enums.dart';
+import 'package:quiz_app/app/utils/app_utils.dart';
 import 'package:quiz_app/features/history/presentation/cubit/state.dart';
 
 import '../../../../core/domain/usecases/usecase.dart';

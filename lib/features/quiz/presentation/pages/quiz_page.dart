@@ -9,6 +9,7 @@ import 'package:quiz_app/features/quiz/presentation/widgets/word_with_pronounce.
 
 import '../../../../app/constants/app_enums.dart';
 import '../../../../core/presentation/widgets/one_field_form.dart';
+import '../../../../core/presentation/widgets/progress_bar.dart';
 import '../../../history/presentation/cubit/cubit.dart';
 import '../cubit/cubit.dart';
 import '../widgets/page_wrapper.dart';
@@ -64,9 +65,20 @@ class _QuizPageState extends State<QuizPage> {
             mainAxisAlignment: .center,
             spacing: 16.0,
             children: [
-              Text(
-                '${state.currentIndex + 1} / ${state.words.length}',
-                style: theme.textTheme.bodyLarge,
+              Row(
+                spacing: 8.0,
+                children: [
+                  Expanded(
+                    child: ProgressBar(
+                      maxValue: state.words.length,
+                      currentValue: state.currentIndex,
+                    ),
+                  ),
+                  Text(
+                    '${state.currentIndex + 1} / ${state.words.length}',
+                    style: theme.textTheme.bodyLarge,
+                  ),
+                ],
               ),
               WordWithPronounce(
                 word: current.questionFor(quizCubit.type),

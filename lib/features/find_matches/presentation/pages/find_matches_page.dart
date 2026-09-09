@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quiz_app/core/presentation/widgets/progress_bar.dart';
 import 'package:quiz_app/core/presentation/widgets/scrolled_wrapper.dart';
 import 'package:quiz_app/features/find_matches/presentation/widgets/word_item.dart';
 import 'package:quiz_app/features/quiz/presentation/widgets/completed_widget.dart';
@@ -87,9 +88,20 @@ class _FindMatchesPageState extends State<FindMatchesPage> {
             mainAxisAlignment: .center,
             spacing: 16.0,
             children: [
-              Text(
-                '${state.leftWords.length} / ${state.totalCount}',
-                style: theme.textTheme.bodyLarge,
+              Row(
+                spacing: 8.0,
+                children: [
+                  Expanded(
+                    child: ProgressBar(
+                      maxValue: state.totalCount,
+                      currentValue: state.totalCount - state.leftWords.length,
+                    ),
+                  ),
+                  Text(
+                    '${state.totalCount - state.leftWords.length} / ${state.totalCount}',
+                    style: theme.textTheme.bodyLarge,
+                  ),
+                ],
               ),
               Row(
                 spacing: 16.0,

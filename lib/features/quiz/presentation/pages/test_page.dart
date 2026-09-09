@@ -9,6 +9,7 @@ import 'package:quiz_app/features/quiz/presentation/widgets/quiz_completed_widge
 import 'package:quiz_app/features/quiz/presentation/widgets/word_with_pronounce.dart';
 
 import '../../../../app/constants/app_enums.dart';
+import '../../../../core/presentation/widgets/progress_bar.dart';
 import '../cubit/cubit.dart';
 import '../widgets/answer_result.dart';
 import '../widgets/answers_block.dart';
@@ -63,9 +64,20 @@ class TestPage extends StatelessWidget {
                 },
               ),
             ),
-            Text(
-              '${state.currentIndex + 1} / ${state.words.length}',
-              style: theme.textTheme.bodyLarge,
+            Row(
+              spacing: 8.0,
+              children: [
+                Expanded(
+                  child: ProgressBar(
+                    maxValue: state.words.length,
+                    currentValue: state.currentIndex,
+                  ),
+                ),
+                Text(
+                  '${state.currentIndex + 1} / ${state.words.length}',
+                  style: theme.textTheme.bodyLarge,
+                ),
+              ],
             ),
           ],
         );

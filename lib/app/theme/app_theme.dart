@@ -217,11 +217,10 @@ class AppTheme {
           inactiveTickMarkColor: appColors.scaffoldBackground,
         ),
         dialogTheme: DialogThemeData(
-          backgroundColor: appColors.scaffoldBackground,
+          backgroundColor: appColors.bottomBarBackground,
           insetPadding: const .all(16.0),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadiusGeometry.circular(12.0),
-            side: BorderSide(color: appColors.secondaryText, width: 1.0),
           ),
         ),
       );
@@ -436,7 +435,7 @@ class AppTheme {
           inactiveTickMarkColor: appColors.scaffoldBackground,
         ),
         dialogTheme: DialogThemeData(
-          backgroundColor: appColors.scaffoldBackground,
+          backgroundColor: appColors.bottomBarBackground,
           insetPadding: const .all(16.0),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadiusGeometry.circular(12.0),

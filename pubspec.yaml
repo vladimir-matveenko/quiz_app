@@ -33,6 +33,7 @@ dependencies:
   package_info_plus: ^10.2.1
   vibration: ^3.2.1
   http: ^1.6.0
+  flutter_native_splash: ^2.4.8
 
 dev_dependencies:
   flutter_test:
@@ -61,4 +62,5 @@ flutter:
     - assets/database/
     - assets/texts/
     - assets/covers/
+    - assets/splash/
 

@@ -1,6 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:quiz_app/app/router/app_router.dart';
 import 'package:quiz_app/features/auth/presentation/cubit/cubit.dart';
 import 'package:quiz_app/features/find_matches/presentation/cubit/cubit.dart';
@@ -31,6 +33,14 @@ class _MyAppState extends State<MyApp> {
   final translationCatalogCubit = getIt<TextCatalogCubit>();
   final quizCubit = getIt<QuizCubit>();
   final findMatchesCubit = getIt<FindMatchesCubit>();
+
+  @override
+  void initState() {
+    super.initState();
+    if (!kIsWeb) {
+      FlutterNativeSplash.remove();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {

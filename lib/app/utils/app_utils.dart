@@ -1,9 +1,11 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:http/http.dart' as http;
 import 'package:quiz_app/core/error/failure.dart';
 
@@ -73,5 +75,39 @@ class AppUtils {
     }
 
     return 'errors.geminiErrors.unknownError'.tr();
+  }
+
+  static Future<void> precacheImages(
+    BuildContext context, {
+    required List<String> images,
+    VoidCallback? onDone,
+  }) async {
+    try {
+      await Future.wait(
+        images.map((image) async {
+          try {
+            if (image.toLowerCase().endsWith('.svg')) {
+              final loader = SvgAssetLoader(image);
+              await svg.cache.putIfAbsent(
+                loader.cacheKey(null),
+                () => loader.loadBytes(null),
+              );
+            } else {
+              await precacheImage(AssetImage(image), context);
+            }
+          } catch (e, stackTrace) {
+            log(
+              'Failed to precache image: $image',
+              error: e,
+              stackTrace: stackTrace,
+            );
+          }
+        }),
+      );
+    } finally {
+      if (context.mounted) {
+        onDone?.call();
+      }
+    }
   }
 }

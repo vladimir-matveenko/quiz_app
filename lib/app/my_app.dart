@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:quiz_app/app/router/app_router.dart';
+import 'package:quiz_app/app/utils/app_utils.dart';
 import 'package:quiz_app/features/auth/presentation/cubit/cubit.dart';
 import 'package:quiz_app/features/find_matches/presentation/cubit/cubit.dart';
 import 'package:quiz_app/features/profile/presentation/cubit/cubit.dart';
@@ -14,6 +15,7 @@ import '../features/text_catalog/presentation/cubit/cubit.dart';
 import '../features/translation/presentation/cubit/cubit.dart';
 import '../theme/presentation/cubit/cubit.dart';
 import '../theme/presentation/cubit/state.dart';
+import 'constants/asset_paths.dart';
 import 'di/injection.dart';
 
 class MyApp extends StatefulWidget {
@@ -40,6 +42,10 @@ class _MyAppState extends State<MyApp> {
     if (!kIsWeb) {
       FlutterNativeSplash.remove();
     }
+    AppUtils.precacheImages(
+      context,
+      images: [AssetPaths.flagRu, AssetPaths.flagUs],
+    );
   }
 
   @override

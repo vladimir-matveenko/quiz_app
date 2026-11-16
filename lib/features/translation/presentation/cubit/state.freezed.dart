@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'state.dart';
@@ -9,6 +9,7 @@ part of 'state.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
@@ -25,16 +26,21 @@ $TranslationStateCopyWith<TranslationState> get copyWith => _$TranslationStateCo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is TranslationState&&(identical(other.status, status) || other.status == status)&&(identical(other.result, result) || other.result == result)&&const DeepCollectionEquality().equals(other.russianText, russianText)&&(identical(other.currentIndex, currentIndex) || other.currentIndex == currentIndex)&&(identical(other.totalScore, totalScore) || other.totalScore == totalScore)&&(identical(other.error, error) || other.error == error));
+  final _this = this as TranslationState;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is TranslationState&&(identical(other.status, _this.status) || other.status == _this.status)&&(identical(other.result, _this.result) || other.result == _this.result)&&const DeepCollectionEquality().equals(other.russianText, _this.russianText)&&(identical(other.currentIndex, _this.currentIndex) || other.currentIndex == _this.currentIndex)&&(identical(other.totalScore, _this.totalScore) || other.totalScore == _this.totalScore)&&(identical(other.error, _this.error) || other.error == _this.error));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,status,result,const DeepCollectionEquality().hash(russianText),currentIndex,totalScore,error);
+int get hashCode {
+  final _this = this as TranslationState;
+  return Object.hash(runtimeType,_this.status,_this.result,const DeepCollectionEquality().hash(_this.russianText),_this.currentIndex,_this.totalScore,_this.error);
+}
 
 @override
 String toString() {
-  return 'TranslationState(status: $status, result: $result, russianText: $russianText, currentIndex: $currentIndex, totalScore: $totalScore, error: $error)';
+  final _this = this as TranslationState;
+  return 'TranslationState(status: ${_this.status}, result: ${_this.result}, russianText: ${_this.russianText}, currentIndex: ${_this.currentIndex}, totalScore: ${_this.totalScore}, error: ${_this.error})';
 }
 
 
@@ -63,7 +69,7 @@ class _$TranslationStateCopyWithImpl<$Res>
 /// Create a copy of TranslationState
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? status = null,Object? result = freezed,Object? russianText = null,Object? currentIndex = null,Object? totalScore = null,Object? error = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(TranslationState(
 status: null == status ? _self.status : status // ignore: cast_nullable_to_non_nullable
 as TranslationStatus,result: freezed == result ? _self.result : result // ignore: cast_nullable_to_non_nullable
 as TranslationCheckResultEntity?,russianText: null == russianText ? _self.russianText : russianText // ignore: cast_nullable_to_non_nullable
@@ -211,7 +217,7 @@ return $default(_that.status,_that.result,_that.russianText,_that.currentIndex,_
 
 
 class _TranslationState implements TranslationState {
-  const _TranslationState({this.status = TranslationStatus.initial, this.result, final  List<String> russianText = const [], this.currentIndex = 0, this.totalScore = 0, this.error}): _russianText = russianText;
+  const _TranslationState({this.status = TranslationStatus.initial, this.result,  List<String> russianText = const [], this.currentIndex = 0, this.totalScore = 0, this.error}): _russianText = russianText;
   
 
 @override@JsonKey() final  TranslationStatus status;
@@ -237,16 +243,18 @@ _$TranslationStateCopyWith<_TranslationState> get copyWith => __$TranslationStat
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _TranslationState&&(identical(other.status, status) || other.status == status)&&(identical(other.result, result) || other.result == result)&&const DeepCollectionEquality().equals(other._russianText, _russianText)&&(identical(other.currentIndex, currentIndex) || other.currentIndex == currentIndex)&&(identical(other.totalScore, totalScore) || other.totalScore == totalScore)&&(identical(other.error, error) || other.error == error));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _TranslationState&&(identical(other.status, status) || other.status == status)&&(identical(other.result, result) || other.result == result)&&const DeepCollectionEquality().equals(other.russianText, _russianText)&&(identical(other.currentIndex, currentIndex) || other.currentIndex == currentIndex)&&(identical(other.totalScore, totalScore) || other.totalScore == totalScore)&&(identical(other.error, error) || other.error == error));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,status,result,const DeepCollectionEquality().hash(_russianText),currentIndex,totalScore,error);
+int get hashCode {
+    return Object.hash(runtimeType,status,result,const DeepCollectionEquality().hash(_russianText),currentIndex,totalScore,error);
+}
 
 @override
 String toString() {
-  return 'TranslationState(status: $status, result: $result, russianText: $russianText, currentIndex: $currentIndex, totalScore: $totalScore, error: $error)';
+    return 'TranslationState(status: $status, result: $result, russianText: $russianText, currentIndex: $currentIndex, totalScore: $totalScore, error: $error)';
 }
 
 

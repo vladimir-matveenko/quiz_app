@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'state.dart';
@@ -9,6 +9,7 @@ part of 'state.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
@@ -25,16 +26,21 @@ $HistoryStateCopyWith<HistoryState> get copyWith => _$HistoryStateCopyWithImpl<H
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is HistoryState&&const DeepCollectionEquality().equals(other.history, history)&&const DeepCollectionEquality().equals(other.trainingDays, trainingDays)&&(identical(other.error, error) || other.error == error)&&(identical(other.isLoading, isLoading) || other.isLoading == isLoading)&&(identical(other.isShowLoader, isShowLoader) || other.isShowLoader == isShowLoader)&&(identical(other.success, success) || other.success == success)&&(identical(other.initialized, initialized) || other.initialized == initialized));
+  final _this = this as HistoryState;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is HistoryState&&const DeepCollectionEquality().equals(other.history, _this.history)&&const DeepCollectionEquality().equals(other.trainingDays, _this.trainingDays)&&(identical(other.error, _this.error) || other.error == _this.error)&&(identical(other.isLoading, _this.isLoading) || other.isLoading == _this.isLoading)&&(identical(other.isShowLoader, _this.isShowLoader) || other.isShowLoader == _this.isShowLoader)&&(identical(other.success, _this.success) || other.success == _this.success)&&(identical(other.initialized, _this.initialized) || other.initialized == _this.initialized));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(history),const DeepCollectionEquality().hash(trainingDays),error,isLoading,isShowLoader,success,initialized);
+int get hashCode {
+  final _this = this as HistoryState;
+  return Object.hash(runtimeType,const DeepCollectionEquality().hash(_this.history),const DeepCollectionEquality().hash(_this.trainingDays),_this.error,_this.isLoading,_this.isShowLoader,_this.success,_this.initialized);
+}
 
 @override
 String toString() {
-  return 'HistoryState(history: $history, trainingDays: $trainingDays, error: $error, isLoading: $isLoading, isShowLoader: $isShowLoader, success: $success, initialized: $initialized)';
+  final _this = this as HistoryState;
+  return 'HistoryState(history: ${_this.history}, trainingDays: ${_this.trainingDays}, error: ${_this.error}, isLoading: ${_this.isLoading}, isShowLoader: ${_this.isShowLoader}, success: ${_this.success}, initialized: ${_this.initialized})';
 }
 
 
@@ -63,7 +69,7 @@ class _$HistoryStateCopyWithImpl<$Res>
 /// Create a copy of HistoryState
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? history = null,Object? trainingDays = null,Object? error = freezed,Object? isLoading = null,Object? isShowLoader = null,Object? success = null,Object? initialized = null,}) {
-  return _then(_self.copyWith(
+  return _then(HistoryState(
 history: null == history ? _self.history : history // ignore: cast_nullable_to_non_nullable
 as List<HistoryEntity>,trainingDays: null == trainingDays ? _self.trainingDays : trainingDays // ignore: cast_nullable_to_non_nullable
 as List<DateTime>,error: freezed == error ? _self.error : error // ignore: cast_nullable_to_non_nullable
@@ -212,7 +218,7 @@ return $default(_that.history,_that.trainingDays,_that.error,_that.isLoading,_th
 
 
 class _HistoryState implements HistoryState {
-  const _HistoryState({final  List<HistoryEntity> history = const [], final  List<DateTime> trainingDays = const [], this.error, this.isLoading = false, this.isShowLoader = false, this.success = false, this.initialized = false}): _history = history,_trainingDays = trainingDays;
+  const _HistoryState({ List<HistoryEntity> history = const [],  List<DateTime> trainingDays = const [], this.error, this.isLoading = false, this.isShowLoader = false, this.success = false, this.initialized = false}): _history = history,_trainingDays = trainingDays;
   
 
  final  List<HistoryEntity> _history;
@@ -245,16 +251,18 @@ _$HistoryStateCopyWith<_HistoryState> get copyWith => __$HistoryStateCopyWithImp
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _HistoryState&&const DeepCollectionEquality().equals(other._history, _history)&&const DeepCollectionEquality().equals(other._trainingDays, _trainingDays)&&(identical(other.error, error) || other.error == error)&&(identical(other.isLoading, isLoading) || other.isLoading == isLoading)&&(identical(other.isShowLoader, isShowLoader) || other.isShowLoader == isShowLoader)&&(identical(other.success, success) || other.success == success)&&(identical(other.initialized, initialized) || other.initialized == initialized));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _HistoryState&&const DeepCollectionEquality().equals(other.history, _history)&&const DeepCollectionEquality().equals(other.trainingDays, _trainingDays)&&(identical(other.error, error) || other.error == error)&&(identical(other.isLoading, isLoading) || other.isLoading == isLoading)&&(identical(other.isShowLoader, isShowLoader) || other.isShowLoader == isShowLoader)&&(identical(other.success, success) || other.success == success)&&(identical(other.initialized, initialized) || other.initialized == initialized));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_history),const DeepCollectionEquality().hash(_trainingDays),error,isLoading,isShowLoader,success,initialized);
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(_history),const DeepCollectionEquality().hash(_trainingDays),error,isLoading,isShowLoader,success,initialized);
+}
 
 @override
 String toString() {
-  return 'HistoryState(history: $history, trainingDays: $trainingDays, error: $error, isLoading: $isLoading, isShowLoader: $isShowLoader, success: $success, initialized: $initialized)';
+    return 'HistoryState(history: $history, trainingDays: $trainingDays, error: $error, isLoading: $isLoading, isShowLoader: $isShowLoader, success: $success, initialized: $initialized)';
 }
 
 

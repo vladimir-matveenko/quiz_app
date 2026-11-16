@@ -716,22 +716,20 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   List<DatabaseSchemaEntity> get allSchemaEntities => [words, historyTable];
 }
 
-typedef $$WordsTableCreateCompanionBuilder =
-    WordsCompanion Function({
-      required String englishWord,
-      required String russianWord,
-      Value<int?> count,
-      Value<double?> probability,
-      Value<int> rowid,
-    });
-typedef $$WordsTableUpdateCompanionBuilder =
-    WordsCompanion Function({
-      Value<String> englishWord,
-      Value<String> russianWord,
-      Value<int?> count,
-      Value<double?> probability,
-      Value<int> rowid,
-    });
+typedef $$WordsTableCreateCompanionBuilder = WordsCompanion Function({
+  required String englishWord,
+  required String russianWord,
+  Value<int?> count,
+  Value<double?> probability,
+  Value<int> rowid,
+});
+typedef $$WordsTableUpdateCompanionBuilder = WordsCompanion Function({
+  Value<String> englishWord,
+  Value<String> russianWord,
+  Value<int?> count,
+  Value<double?> probability,
+  Value<int> rowid,
+});
 
 class $$WordsTableFilterComposer extends Composer<_$AppDatabase, $WordsTable> {
   $$WordsTableFilterComposer({
@@ -875,7 +873,16 @@ class $$WordsTableTableManager
                 rowid: rowid,
               ),
           withReferenceMapper: (p0) => p0
-              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .map(
+                (e) => (
+                  e.readTable<$WordsTable, Word>(table),
+                  BaseReferences<_$AppDatabase, $WordsTable, Word>(
+                    db,
+                    table,
+                    e,
+                  ),
+                ),
+              )
               .toList(),
           prefetchHooksCallback: null,
         ),
@@ -1071,7 +1078,16 @@ class $$HistoryTableTableTableManager
                 totalAnswers: totalAnswers,
               ),
           withReferenceMapper: (p0) => p0
-              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .map(
+                (e) => (
+                  e.readTable<$HistoryTableTable, HistoryTableData>(table),
+                  BaseReferences<
+                    _$AppDatabase,
+                    $HistoryTableTable,
+                    HistoryTableData
+                  >(db, table, e),
+                ),
+              )
               .toList(),
           prefetchHooksCallback: null,
         ),

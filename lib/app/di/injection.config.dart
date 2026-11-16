@@ -9,9 +9,10 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
+
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
-import 'package:quiz_app/app/di/modules/database_module.dart' as _i1034;
+import 'package:quiz_app/app/di/modules/database_module.dart' as _i1035;
 import 'package:quiz_app/app/di/modules/shared_pref_module.dart' as _i775;
 import 'package:quiz_app/app/router/app_router.dart' as _i223;
 import 'package:quiz_app/features/auth/domain/usecases/check_auth_usecase.dart'
@@ -30,7 +31,7 @@ import 'package:quiz_app/features/dictionary/services/dictionary_service.dart'
 import 'package:quiz_app/features/dictionary/services/tts_service.dart'
     as _i192;
 import 'package:quiz_app/features/find_matches/presentation/cubit/cubit.dart'
-    as _i146;
+    as _i147;
 import 'package:quiz_app/features/history/data/data_sources/history_local_data_source.dart'
     as _i731;
 import 'package:quiz_app/features/history/data/repository/history_repository_impl.dart'
@@ -73,7 +74,7 @@ import 'package:quiz_app/features/text_catalog/domain/usecases/load_catalog_usec
 import 'package:quiz_app/features/text_catalog/presentation/cubit/cubit.dart'
     as _i25;
 import 'package:quiz_app/features/translation/data/services/gemini_service_impl.dart'
-    as _i192;
+    as _i193;
 import 'package:quiz_app/features/translation/domain/services/gemini_service.dart'
     as _i631;
 import 'package:quiz_app/features/translation/domain/usecases/check_translation_usecase.dart'
@@ -125,7 +126,7 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i593.ThemeLocalDataSource>(
       () => _i593.ThemeLocalDataSourceImpl(gh<_i460.SharedPreferences>()),
     );
-    gh.lazySingleton<_i631.GeminiService>(() => _i192.GeminiServiceImpl());
+    gh.lazySingleton<_i631.GeminiService>(() => _i193.GeminiServiceImpl());
     gh.lazySingleton<_i806.CheckTranslationUseCase>(
       () => _i806.CheckTranslationUseCase(gh<_i631.GeminiService>()),
     );
@@ -140,8 +141,8 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i998.TranslationCubit>(
       () => _i998.TranslationCubit(gh<_i806.CheckTranslationUseCase>()),
     );
-    gh.lazySingleton<_i146.FindMatchesCubit>(
-      () => _i146.FindMatchesCubit(
+    gh.lazySingleton<_i147.FindMatchesCubit>(
+      () => _i147.FindMatchesCubit(
         gh<_i66.DictionaryLocalDataSource>(),
         gh<_i192.TtsService>(),
       ),
@@ -239,4 +240,4 @@ extension GetItInjectableX on _i174.GetIt {
 
 class _$SharedPrefModule extends _i775.SharedPrefModule {}
 
-class _$DatabaseModule extends _i1034.DatabaseModule {}
+class _$DatabaseModule extends _i1035.DatabaseModule {}

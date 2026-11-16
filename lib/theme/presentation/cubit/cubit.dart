@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:quiz_app/theme/presentation/cubit/state.dart';
 
 import '../../../app/theme/app_theme.dart';

@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'state.dart';
@@ -9,6 +9,7 @@ part of 'state.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
@@ -25,16 +26,21 @@ $QuizStateCopyWith<QuizState> get copyWith => _$QuizStateCopyWithImpl<QuizState>
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is QuizState&&(identical(other.status, status) || other.status == status)&&const DeepCollectionEquality().equals(other.words, words)&&const DeepCollectionEquality().equals(other.additionalWords, additionalWords)&&const DeepCollectionEquality().equals(other.answers, answers)&&(identical(other.currentIndex, currentIndex) || other.currentIndex == currentIndex)&&(identical(other.correctCount, correctCount) || other.correctCount == correctCount)&&(identical(other.errorMessage, errorMessage) || other.errorMessage == errorMessage)&&(identical(other.userAnswer, userAnswer) || other.userAnswer == userAnswer)&&(identical(other.answered, answered) || other.answered == answered)&&(identical(other.correct, correct) || other.correct == correct));
+  final _this = this as QuizState;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is QuizState&&(identical(other.status, _this.status) || other.status == _this.status)&&const DeepCollectionEquality().equals(other.words, _this.words)&&const DeepCollectionEquality().equals(other.additionalWords, _this.additionalWords)&&const DeepCollectionEquality().equals(other.answers, _this.answers)&&(identical(other.currentIndex, _this.currentIndex) || other.currentIndex == _this.currentIndex)&&(identical(other.correctCount, _this.correctCount) || other.correctCount == _this.correctCount)&&(identical(other.errorMessage, _this.errorMessage) || other.errorMessage == _this.errorMessage)&&(identical(other.userAnswer, _this.userAnswer) || other.userAnswer == _this.userAnswer)&&(identical(other.answered, _this.answered) || other.answered == _this.answered)&&(identical(other.correct, _this.correct) || other.correct == _this.correct));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,status,const DeepCollectionEquality().hash(words),const DeepCollectionEquality().hash(additionalWords),const DeepCollectionEquality().hash(answers),currentIndex,correctCount,errorMessage,userAnswer,answered,correct);
+int get hashCode {
+  final _this = this as QuizState;
+  return Object.hash(runtimeType,_this.status,const DeepCollectionEquality().hash(_this.words),const DeepCollectionEquality().hash(_this.additionalWords),const DeepCollectionEquality().hash(_this.answers),_this.currentIndex,_this.correctCount,_this.errorMessage,_this.userAnswer,_this.answered,_this.correct);
+}
 
 @override
 String toString() {
-  return 'QuizState(status: $status, words: $words, additionalWords: $additionalWords, answers: $answers, currentIndex: $currentIndex, correctCount: $correctCount, errorMessage: $errorMessage, userAnswer: $userAnswer, answered: $answered, correct: $correct)';
+  final _this = this as QuizState;
+  return 'QuizState(status: ${_this.status}, words: ${_this.words}, additionalWords: ${_this.additionalWords}, answers: ${_this.answers}, currentIndex: ${_this.currentIndex}, correctCount: ${_this.correctCount}, errorMessage: ${_this.errorMessage}, userAnswer: ${_this.userAnswer}, answered: ${_this.answered}, correct: ${_this.correct})';
 }
 
 
@@ -63,7 +69,7 @@ class _$QuizStateCopyWithImpl<$Res>
 /// Create a copy of QuizState
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? status = null,Object? words = null,Object? additionalWords = null,Object? answers = null,Object? currentIndex = null,Object? correctCount = null,Object? errorMessage = freezed,Object? userAnswer = freezed,Object? answered = null,Object? correct = null,}) {
-  return _then(_self.copyWith(
+  return _then(QuizState(
 status: null == status ? _self.status : status // ignore: cast_nullable_to_non_nullable
 as QuizStatus,words: null == words ? _self.words : words // ignore: cast_nullable_to_non_nullable
 as List<Word>,additionalWords: null == additionalWords ? _self.additionalWords : additionalWords // ignore: cast_nullable_to_non_nullable
@@ -215,7 +221,7 @@ return $default(_that.status,_that.words,_that.additionalWords,_that.answers,_th
 
 
 class _QuizState implements QuizState {
-  const _QuizState({this.status = QuizStatus.initial, final  List<Word> words = const [], final  List<String> additionalWords = const [], final  List<String> answers = const [], this.currentIndex = 0, this.correctCount = 0, this.errorMessage, this.userAnswer, this.answered = false, this.correct = false}): _words = words,_additionalWords = additionalWords,_answers = answers;
+  const _QuizState({this.status = QuizStatus.initial,  List<Word> words = const [],  List<String> additionalWords = const [],  List<String> answers = const [], this.currentIndex = 0, this.correctCount = 0, this.errorMessage, this.userAnswer, this.answered = false, this.correct = false}): _words = words,_additionalWords = additionalWords,_answers = answers;
   
 
 @override@JsonKey() final  QuizStatus status;
@@ -257,16 +263,18 @@ _$QuizStateCopyWith<_QuizState> get copyWith => __$QuizStateCopyWithImpl<_QuizSt
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _QuizState&&(identical(other.status, status) || other.status == status)&&const DeepCollectionEquality().equals(other._words, _words)&&const DeepCollectionEquality().equals(other._additionalWords, _additionalWords)&&const DeepCollectionEquality().equals(other._answers, _answers)&&(identical(other.currentIndex, currentIndex) || other.currentIndex == currentIndex)&&(identical(other.correctCount, correctCount) || other.correctCount == correctCount)&&(identical(other.errorMessage, errorMessage) || other.errorMessage == errorMessage)&&(identical(other.userAnswer, userAnswer) || other.userAnswer == userAnswer)&&(identical(other.answered, answered) || other.answered == answered)&&(identical(other.correct, correct) || other.correct == correct));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _QuizState&&(identical(other.status, status) || other.status == status)&&const DeepCollectionEquality().equals(other.words, _words)&&const DeepCollectionEquality().equals(other.additionalWords, _additionalWords)&&const DeepCollectionEquality().equals(other.answers, _answers)&&(identical(other.currentIndex, currentIndex) || other.currentIndex == currentIndex)&&(identical(other.correctCount, correctCount) || other.correctCount == correctCount)&&(identical(other.errorMessage, errorMessage) || other.errorMessage == errorMessage)&&(identical(other.userAnswer, userAnswer) || other.userAnswer == userAnswer)&&(identical(other.answered, answered) || other.answered == answered)&&(identical(other.correct, correct) || other.correct == correct));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,status,const DeepCollectionEquality().hash(_words),const DeepCollectionEquality().hash(_additionalWords),const DeepCollectionEquality().hash(_answers),currentIndex,correctCount,errorMessage,userAnswer,answered,correct);
+int get hashCode {
+    return Object.hash(runtimeType,status,const DeepCollectionEquality().hash(_words),const DeepCollectionEquality().hash(_additionalWords),const DeepCollectionEquality().hash(_answers),currentIndex,correctCount,errorMessage,userAnswer,answered,correct);
+}
 
 @override
 String toString() {
-  return 'QuizState(status: $status, words: $words, additionalWords: $additionalWords, answers: $answers, currentIndex: $currentIndex, correctCount: $correctCount, errorMessage: $errorMessage, userAnswer: $userAnswer, answered: $answered, correct: $correct)';
+    return 'QuizState(status: $status, words: $words, additionalWords: $additionalWords, answers: $answers, currentIndex: $currentIndex, correctCount: $correctCount, errorMessage: $errorMessage, userAnswer: $userAnswer, answered: $answered, correct: $correct)';
 }
 
 

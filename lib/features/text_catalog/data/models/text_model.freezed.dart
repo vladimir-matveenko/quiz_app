@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'text_model.dart';
@@ -9,6 +9,7 @@ part of 'text_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $TextModelCopyWith<TextModel> get copyWith => _$TextModelCopyWithImpl<TextModel>
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is TextModel&&(identical(other.id, id) || other.id == id)&&(identical(other.title, title) || other.title == title)&&const DeepCollectionEquality().equals(other.text, text)&&(identical(other.level, level) || other.level == level));
+  final _this = this as TextModel;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is TextModel&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.title, _this.title) || other.title == _this.title)&&const DeepCollectionEquality().equals(other.text, _this.text)&&(identical(other.level, _this.level) || other.level == _this.level));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,title,const DeepCollectionEquality().hash(text),level);
+int get hashCode {
+  final _this = this as TextModel;
+  return Object.hash(runtimeType,_this.id,_this.title,const DeepCollectionEquality().hash(_this.text),_this.level);
+}
 
 @override
 String toString() {
-  return 'TextModel(id: $id, title: $title, text: $text, level: $level)';
+  final _this = this as TextModel;
+  return 'TextModel(id: ${_this.id}, title: ${_this.title}, text: ${_this.text}, level: ${_this.level})';
 }
 
 
@@ -66,7 +72,7 @@ class _$TextModelCopyWithImpl<$Res>
 /// Create a copy of TextModel
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? title = null,Object? text = null,Object? level = null,}) {
-  return _then(_self.copyWith(
+  return _then(TextModel(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as int,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
 as String,text: null == text ? _self.text : text // ignore: cast_nullable_to_non_nullable
@@ -212,7 +218,7 @@ return $default(_that.id,_that.title,_that.text,_that.level);case _:
 @JsonSerializable()
 
 class _TextModel extends TextModel {
-  const _TextModel({required this.id, required this.title, required final  List<String> text, required this.level}): _text = text,super._();
+  const _TextModel({required this.id, required this.title, required  List<String> text, required this.level}): _text = text,super._();
   factory _TextModel.fromJson(Map<String, dynamic> json) => _$TextModelFromJson(json);
 
 @override final  int id;
@@ -239,16 +245,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _TextModel&&(identical(other.id, id) || other.id == id)&&(identical(other.title, title) || other.title == title)&&const DeepCollectionEquality().equals(other._text, _text)&&(identical(other.level, level) || other.level == level));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _TextModel&&(identical(other.id, id) || other.id == id)&&(identical(other.title, title) || other.title == title)&&const DeepCollectionEquality().equals(other.text, _text)&&(identical(other.level, level) || other.level == level));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,title,const DeepCollectionEquality().hash(_text),level);
+int get hashCode {
+    return Object.hash(runtimeType,id,title,const DeepCollectionEquality().hash(_text),level);
+}
 
 @override
 String toString() {
-  return 'TextModel(id: $id, title: $title, text: $text, level: $level)';
+    return 'TextModel(id: $id, title: $title, text: $text, level: $level)';
 }
 
 

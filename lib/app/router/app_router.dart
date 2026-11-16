@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:injectable/injectable.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:quiz_app/app/router/app_routes.dart';
 import 'package:quiz_app/features/auth/presentation/cubit/cubit.dart';
 import 'package:quiz_app/features/auth/presentation/cubit/state.dart';

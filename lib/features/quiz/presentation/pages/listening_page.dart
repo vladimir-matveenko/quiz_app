@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:quiz_app/app/constants/app_constants.dart';
 import 'package:quiz_app/core/presentation/widgets/scrolled_wrapper.dart';
 

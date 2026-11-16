@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'state.dart';
@@ -9,6 +9,7 @@ part of 'state.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
@@ -25,16 +26,21 @@ $FindMatchesStateCopyWith<FindMatchesState> get copyWith => _$FindMatchesStateCo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is FindMatchesState&&(identical(other.status, status) || other.status == status)&&const DeepCollectionEquality().equals(other.leftWords, leftWords)&&const DeepCollectionEquality().equals(other.rightWords, rightWords)&&const DeepCollectionEquality().equals(other.left, left)&&const DeepCollectionEquality().equals(other.right, right)&&(identical(other.errorsCount, errorsCount) || other.errorsCount == errorsCount)&&(identical(other.totalCount, totalCount) || other.totalCount == totalCount)&&(identical(other.correct, correct) || other.correct == correct)&&(identical(other.answered, answered) || other.answered == answered)&&(identical(other.errorMessage, errorMessage) || other.errorMessage == errorMessage));
+  final _this = this as FindMatchesState;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is FindMatchesState&&(identical(other.status, _this.status) || other.status == _this.status)&&const DeepCollectionEquality().equals(other.leftWords, _this.leftWords)&&const DeepCollectionEquality().equals(other.rightWords, _this.rightWords)&&const DeepCollectionEquality().equals(other.left, _this.left)&&const DeepCollectionEquality().equals(other.right, _this.right)&&(identical(other.errorsCount, _this.errorsCount) || other.errorsCount == _this.errorsCount)&&(identical(other.totalCount, _this.totalCount) || other.totalCount == _this.totalCount)&&(identical(other.correct, _this.correct) || other.correct == _this.correct)&&(identical(other.answered, _this.answered) || other.answered == _this.answered)&&(identical(other.errorMessage, _this.errorMessage) || other.errorMessage == _this.errorMessage));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,status,const DeepCollectionEquality().hash(leftWords),const DeepCollectionEquality().hash(rightWords),const DeepCollectionEquality().hash(left),const DeepCollectionEquality().hash(right),errorsCount,totalCount,correct,answered,errorMessage);
+int get hashCode {
+  final _this = this as FindMatchesState;
+  return Object.hash(runtimeType,_this.status,const DeepCollectionEquality().hash(_this.leftWords),const DeepCollectionEquality().hash(_this.rightWords),const DeepCollectionEquality().hash(_this.left),const DeepCollectionEquality().hash(_this.right),_this.errorsCount,_this.totalCount,_this.correct,_this.answered,_this.errorMessage);
+}
 
 @override
 String toString() {
-  return 'FindMatchesState(status: $status, leftWords: $leftWords, rightWords: $rightWords, left: $left, right: $right, errorsCount: $errorsCount, totalCount: $totalCount, correct: $correct, answered: $answered, errorMessage: $errorMessage)';
+  final _this = this as FindMatchesState;
+  return 'FindMatchesState(status: ${_this.status}, leftWords: ${_this.leftWords}, rightWords: ${_this.rightWords}, left: ${_this.left}, right: ${_this.right}, errorsCount: ${_this.errorsCount}, totalCount: ${_this.totalCount}, correct: ${_this.correct}, answered: ${_this.answered}, errorMessage: ${_this.errorMessage})';
 }
 
 
@@ -63,7 +69,7 @@ class _$FindMatchesStateCopyWithImpl<$Res>
 /// Create a copy of FindMatchesState
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? status = null,Object? leftWords = null,Object? rightWords = null,Object? left = freezed,Object? right = freezed,Object? errorsCount = null,Object? totalCount = null,Object? correct = null,Object? answered = null,Object? errorMessage = freezed,}) {
-  return _then(_self.copyWith(
+  return _then(FindMatchesState(
 status: null == status ? _self.status : status // ignore: cast_nullable_to_non_nullable
 as FindMatchesStatus,leftWords: null == leftWords ? _self.leftWords : leftWords // ignore: cast_nullable_to_non_nullable
 as List<Word>,rightWords: null == rightWords ? _self.rightWords : rightWords // ignore: cast_nullable_to_non_nullable
@@ -215,7 +221,7 @@ return $default(_that.status,_that.leftWords,_that.rightWords,_that.left,_that.r
 
 
 class _FindMatchesState implements FindMatchesState {
-  const _FindMatchesState({this.status = FindMatchesStatus.initial, final  List<Word> leftWords = const [], final  List<Word> rightWords = const [], this.left, this.right, this.errorsCount = 0, this.totalCount = 0, this.correct = false, this.answered = false, this.errorMessage}): _leftWords = leftWords,_rightWords = rightWords;
+  const _FindMatchesState({this.status = FindMatchesStatus.initial,  List<Word> leftWords = const [],  List<Word> rightWords = const [], this.left, this.right, this.errorsCount = 0, this.totalCount = 0, this.correct = false, this.answered = false, this.errorMessage}): _leftWords = leftWords,_rightWords = rightWords;
   
 
 @override@JsonKey() final  FindMatchesStatus status;
@@ -251,16 +257,18 @@ _$FindMatchesStateCopyWith<_FindMatchesState> get copyWith => __$FindMatchesStat
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _FindMatchesState&&(identical(other.status, status) || other.status == status)&&const DeepCollectionEquality().equals(other._leftWords, _leftWords)&&const DeepCollectionEquality().equals(other._rightWords, _rightWords)&&const DeepCollectionEquality().equals(other.left, left)&&const DeepCollectionEquality().equals(other.right, right)&&(identical(other.errorsCount, errorsCount) || other.errorsCount == errorsCount)&&(identical(other.totalCount, totalCount) || other.totalCount == totalCount)&&(identical(other.correct, correct) || other.correct == correct)&&(identical(other.answered, answered) || other.answered == answered)&&(identical(other.errorMessage, errorMessage) || other.errorMessage == errorMessage));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _FindMatchesState&&(identical(other.status, status) || other.status == status)&&const DeepCollectionEquality().equals(other.leftWords, _leftWords)&&const DeepCollectionEquality().equals(other.rightWords, _rightWords)&&const DeepCollectionEquality().equals(other.left, left)&&const DeepCollectionEquality().equals(other.right, right)&&(identical(other.errorsCount, errorsCount) || other.errorsCount == errorsCount)&&(identical(other.totalCount, totalCount) || other.totalCount == totalCount)&&(identical(other.correct, correct) || other.correct == correct)&&(identical(other.answered, answered) || other.answered == answered)&&(identical(other.errorMessage, errorMessage) || other.errorMessage == errorMessage));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,status,const DeepCollectionEquality().hash(_leftWords),const DeepCollectionEquality().hash(_rightWords),const DeepCollectionEquality().hash(left),const DeepCollectionEquality().hash(right),errorsCount,totalCount,correct,answered,errorMessage);
+int get hashCode {
+    return Object.hash(runtimeType,status,const DeepCollectionEquality().hash(_leftWords),const DeepCollectionEquality().hash(_rightWords),const DeepCollectionEquality().hash(left),const DeepCollectionEquality().hash(right),errorsCount,totalCount,correct,answered,errorMessage);
+}
 
 @override
 String toString() {
-  return 'FindMatchesState(status: $status, leftWords: $leftWords, rightWords: $rightWords, left: $left, right: $right, errorsCount: $errorsCount, totalCount: $totalCount, correct: $correct, answered: $answered, errorMessage: $errorMessage)';
+    return 'FindMatchesState(status: $status, leftWords: $leftWords, rightWords: $rightWords, left: $left, right: $right, errorsCount: $errorsCount, totalCount: $totalCount, correct: $correct, answered: $answered, errorMessage: $errorMessage)';
 }
 
 

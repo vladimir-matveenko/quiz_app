@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'translation_check_result_model.dart';
@@ -9,6 +9,7 @@ part of 'translation_check_result_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $TranslationCheckResultModelCopyWith<TranslationCheckResultModel> get copyWith =
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is TranslationCheckResultModel&&(identical(other.correctTranslation, correctTranslation) || other.correctTranslation == correctTranslation)&&(identical(other.score, score) || other.score == score)&&const DeepCollectionEquality().equals(other.mistakes, mistakes));
+  final _this = this as TranslationCheckResultModel;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is TranslationCheckResultModel&&(identical(other.correctTranslation, _this.correctTranslation) || other.correctTranslation == _this.correctTranslation)&&(identical(other.score, _this.score) || other.score == _this.score)&&const DeepCollectionEquality().equals(other.mistakes, _this.mistakes));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,correctTranslation,score,const DeepCollectionEquality().hash(mistakes));
+int get hashCode {
+  final _this = this as TranslationCheckResultModel;
+  return Object.hash(runtimeType,_this.correctTranslation,_this.score,const DeepCollectionEquality().hash(_this.mistakes));
+}
 
 @override
 String toString() {
-  return 'TranslationCheckResultModel(correctTranslation: $correctTranslation, score: $score, mistakes: $mistakes)';
+  final _this = this as TranslationCheckResultModel;
+  return 'TranslationCheckResultModel(correctTranslation: ${_this.correctTranslation}, score: ${_this.score}, mistakes: ${_this.mistakes})';
 }
 
 
@@ -66,7 +72,7 @@ class _$TranslationCheckResultModelCopyWithImpl<$Res>
 /// Create a copy of TranslationCheckResultModel
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? correctTranslation = null,Object? score = null,Object? mistakes = null,}) {
-  return _then(_self.copyWith(
+  return _then(TranslationCheckResultModel(
 correctTranslation: null == correctTranslation ? _self.correctTranslation : correctTranslation // ignore: cast_nullable_to_non_nullable
 as String,score: null == score ? _self.score : score // ignore: cast_nullable_to_non_nullable
 as int,mistakes: null == mistakes ? _self.mistakes : mistakes // ignore: cast_nullable_to_non_nullable
@@ -211,7 +217,7 @@ return $default(_that.correctTranslation,_that.score,_that.mistakes);case _:
 @JsonSerializable()
 
 class _TranslationCheckResultModel implements TranslationCheckResultModel {
-  const _TranslationCheckResultModel({required this.correctTranslation, required this.score, required final  List<MistakeModel> mistakes}): _mistakes = mistakes;
+  const _TranslationCheckResultModel({required this.correctTranslation, required this.score, required  List<MistakeModel> mistakes}): _mistakes = mistakes;
   factory _TranslationCheckResultModel.fromJson(Map<String, dynamic> json) => _$TranslationCheckResultModelFromJson(json);
 
 @override final  String correctTranslation;
@@ -237,16 +243,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _TranslationCheckResultModel&&(identical(other.correctTranslation, correctTranslation) || other.correctTranslation == correctTranslation)&&(identical(other.score, score) || other.score == score)&&const DeepCollectionEquality().equals(other._mistakes, _mistakes));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _TranslationCheckResultModel&&(identical(other.correctTranslation, correctTranslation) || other.correctTranslation == correctTranslation)&&(identical(other.score, score) || other.score == score)&&const DeepCollectionEquality().equals(other.mistakes, _mistakes));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,correctTranslation,score,const DeepCollectionEquality().hash(_mistakes));
+int get hashCode {
+    return Object.hash(runtimeType,correctTranslation,score,const DeepCollectionEquality().hash(_mistakes));
+}
 
 @override
 String toString() {
-  return 'TranslationCheckResultModel(correctTranslation: $correctTranslation, score: $score, mistakes: $mistakes)';
+    return 'TranslationCheckResultModel(correctTranslation: $correctTranslation, score: $score, mistakes: $mistakes)';
 }
 
 

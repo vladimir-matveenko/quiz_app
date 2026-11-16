@@ -1,5 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:quiz_app/core/utils/extensions.dart';
 
 class AppCalendar extends StatefulWidget {

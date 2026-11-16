@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'state.dart';
@@ -9,6 +9,7 @@ part of 'state.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
@@ -25,16 +26,21 @@ $ProfileStateCopyWith<ProfileState> get copyWith => _$ProfileStateCopyWithImpl<P
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ProfileState&&(identical(other.profile, profile) || other.profile == profile)&&(identical(other.error, error) || other.error == error)&&(identical(other.isLoading, isLoading) || other.isLoading == isLoading)&&(identical(other.success, success) || other.success == success));
+  final _this = this as ProfileState;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ProfileState&&(identical(other.profile, _this.profile) || other.profile == _this.profile)&&(identical(other.error, _this.error) || other.error == _this.error)&&(identical(other.isLoading, _this.isLoading) || other.isLoading == _this.isLoading)&&(identical(other.success, _this.success) || other.success == _this.success));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,profile,error,isLoading,success);
+int get hashCode {
+  final _this = this as ProfileState;
+  return Object.hash(runtimeType,_this.profile,_this.error,_this.isLoading,_this.success);
+}
 
 @override
 String toString() {
-  return 'ProfileState(profile: $profile, error: $error, isLoading: $isLoading, success: $success)';
+  final _this = this as ProfileState;
+  return 'ProfileState(profile: ${_this.profile}, error: ${_this.error}, isLoading: ${_this.isLoading}, success: ${_this.success})';
 }
 
 
@@ -63,7 +69,7 @@ class _$ProfileStateCopyWithImpl<$Res>
 /// Create a copy of ProfileState
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? profile = freezed,Object? error = freezed,Object? isLoading = null,Object? success = null,}) {
-  return _then(_self.copyWith(
+  return _then(ProfileState(
 profile: freezed == profile ? _self.profile : profile // ignore: cast_nullable_to_non_nullable
 as ProfileEntity?,error: freezed == error ? _self.error : error // ignore: cast_nullable_to_non_nullable
 as String?,isLoading: null == isLoading ? _self.isLoading : isLoading // ignore: cast_nullable_to_non_nullable
@@ -239,16 +245,18 @@ _$ProfileStateCopyWith<_ProfileState> get copyWith => __$ProfileStateCopyWithImp
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ProfileState&&(identical(other.profile, profile) || other.profile == profile)&&(identical(other.error, error) || other.error == error)&&(identical(other.isLoading, isLoading) || other.isLoading == isLoading)&&(identical(other.success, success) || other.success == success));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ProfileState&&(identical(other.profile, profile) || other.profile == profile)&&(identical(other.error, error) || other.error == error)&&(identical(other.isLoading, isLoading) || other.isLoading == isLoading)&&(identical(other.success, success) || other.success == success));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,profile,error,isLoading,success);
+int get hashCode {
+    return Object.hash(runtimeType,profile,error,isLoading,success);
+}
 
 @override
 String toString() {
-  return 'ProfileState(profile: $profile, error: $error, isLoading: $isLoading, success: $success)';
+    return 'ProfileState(profile: $profile, error: $error, isLoading: $isLoading, success: $success)';
 }
 
 

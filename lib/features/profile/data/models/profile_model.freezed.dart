@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'profile_model.dart';
@@ -9,6 +9,7 @@ part of 'profile_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -28,16 +29,21 @@ $ProfileModelCopyWith<ProfileModel> get copyWith => _$ProfileModelCopyWithImpl<P
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ProfileModel&&(identical(other.firstName, firstName) || other.firstName == firstName)&&(identical(other.lastName, lastName) || other.lastName == lastName)&&(identical(other.avatar, avatar) || other.avatar == avatar)&&(identical(other.wordCount, wordCount) || other.wordCount == wordCount));
+  final _this = this as ProfileModel;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ProfileModel&&(identical(other.firstName, _this.firstName) || other.firstName == _this.firstName)&&(identical(other.lastName, _this.lastName) || other.lastName == _this.lastName)&&(identical(other.avatar, _this.avatar) || other.avatar == _this.avatar)&&(identical(other.wordCount, _this.wordCount) || other.wordCount == _this.wordCount));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,firstName,lastName,avatar,wordCount);
+int get hashCode {
+  final _this = this as ProfileModel;
+  return Object.hash(runtimeType,_this.firstName,_this.lastName,_this.avatar,_this.wordCount);
+}
 
 @override
 String toString() {
-  return 'ProfileModel(firstName: $firstName, lastName: $lastName, avatar: $avatar, wordCount: $wordCount)';
+  final _this = this as ProfileModel;
+  return 'ProfileModel(firstName: ${_this.firstName}, lastName: ${_this.lastName}, avatar: ${_this.avatar}, wordCount: ${_this.wordCount})';
 }
 
 
@@ -66,7 +72,7 @@ class _$ProfileModelCopyWithImpl<$Res>
 /// Create a copy of ProfileModel
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? firstName = null,Object? lastName = null,Object? avatar = freezed,Object? wordCount = null,}) {
-  return _then(_self.copyWith(
+  return _then(ProfileModel(
 firstName: null == firstName ? _self.firstName : firstName // ignore: cast_nullable_to_non_nullable
 as String,lastName: null == lastName ? _self.lastName : lastName // ignore: cast_nullable_to_non_nullable
 as String,avatar: freezed == avatar ? _self.avatar : avatar // ignore: cast_nullable_to_non_nullable
@@ -233,16 +239,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ProfileModel&&(identical(other.firstName, firstName) || other.firstName == firstName)&&(identical(other.lastName, lastName) || other.lastName == lastName)&&(identical(other.avatar, avatar) || other.avatar == avatar)&&(identical(other.wordCount, wordCount) || other.wordCount == wordCount));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ProfileModel&&(identical(other.firstName, firstName) || other.firstName == firstName)&&(identical(other.lastName, lastName) || other.lastName == lastName)&&(identical(other.avatar, avatar) || other.avatar == avatar)&&(identical(other.wordCount, wordCount) || other.wordCount == wordCount));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,firstName,lastName,avatar,wordCount);
+int get hashCode {
+    return Object.hash(runtimeType,firstName,lastName,avatar,wordCount);
+}
 
 @override
 String toString() {
-  return 'ProfileModel(firstName: $firstName, lastName: $lastName, avatar: $avatar, wordCount: $wordCount)';
+    return 'ProfileModel(firstName: $firstName, lastName: $lastName, avatar: $avatar, wordCount: $wordCount)';
 }
 
 

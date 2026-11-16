@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:quiz_app/features/quiz/presentation/widgets/word_with_pronounce.dart';
 
 class FlashCard extends StatelessWidget {

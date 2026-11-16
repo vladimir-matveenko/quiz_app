@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:quiz_app/core/presentation/widgets/app_back_button.dart';
 import 'package:quiz_app/features/main/presentation/widgets/bottom_nav_bar.dart';
 
